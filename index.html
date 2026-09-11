@@ -1,1 +1,299 @@
+<!DOCTYPE html>
+<html>
 
+<header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>MY Web</title>
+
+  <style>
+    :root {
+  --bg-color: #eee;
+  --text-col: #000;
+
+  --bg-color: #f5fbda;
+  --text-col: #118ab2;
+
+  --text-hover-col: #aaa;
+
+  --bottom-padding: 120px;
+}
+img {
+  filter: grayscale(1);
+}
+
+body {
+  color: var(--text-col);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 20px;
+
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media (min-width: 640px) {
+  body {
+    padding: 40px calc(50vw - 300px) 20px;
+  }
+}
+
+.top {
+  qborder: 1px red solid;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 0 var(--bottom-padding);
+}
+.top font {
+  font-size: 60px;
+}
+.top div {
+  font-size: 20px;
+  text-align: right;
+  line-height: 1.5;
+}
+.top span {
+  display: block;
+}
+.top span:hover {
+  color: var(--text-hover-col);
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0 0 10px;
+  display: block;
+}
+
+.about-me {
+  margin: 0 0 var(--bottom-padding);
+  font-size: 14px;
+}
+.about-me div {
+  margin: 0 0 20px;
+}
+
+.project {
+  qborder: 1px red solid;
+  margin: 0 0 var(--bottom-padding);
+}
+.project-shell {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: row;
+  gap: 8px;
+
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.project-shell::-webkit-scrollbar {
+  display: none;
+}
+.project-shell div {
+  min-width: 120px;
+  width: 120px;
+  cursor: pointer;
+}
+.project-shell div:hover {
+  acolor: var(--text-hover-col);
+}
+.project-shell div span {
+  font-size: 18px;
+  display: block;
+}
+.project-shell div font {
+  font-size: 12px;
+  display: block;
+}
+.project-shell div img {
+  width: 100%;
+}
+
+.more-bnt {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: var(--bg-color);
+  background-color: var(--text-col);
+  opacity: 0.5;
+
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.skill {
+  font-size: 20px;
+  margin: 0 0 var(--bottom-padding);
+  line-height: 2;
+}
+.skill span {
+  cursor: pointer;
+}
+.skill span:hover {
+  color: var(--text-hover-col);
+  cursor: pointer;
+}
+.skill img {
+  height: 40px;
+  margin: 0 0 0;
+  vertical-align: middle;
+}
+
+.contact {
+  margin: 0 0 var(--bottom-padding);
+}
+
+.grass {
+  position: relative;
+  margin: -20px;
+  height: 50vh;
+  margin-top: -100px;
+  
+  -webkit-mask-image: linear-gradient(to top, black 25%, transparent 100%);
+  mask-image: linear-gradient(to top, black 25%, transparent 100%);
+}
+.grass .bg{
+  position: absolute;
+  z-index: 50;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+
+  background-size: cover;
+  background-position: center 68%;
+  background-image: url("https://images.unsplash.com/photo-1647285906260-64077974b604?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  filter: grayscale(1);
+  mix-blend-mode: multiply;
+}
+.grass .bg-color{
+  sborder: 1px blue solid;
+  position: absolute;
+  z-index: 5;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: var(--bg-color);
+}
+@media (min-width: 640px) {
+  .grass {
+    margin: 0 calc(-50vw + 300px) -20px;
+  margin-top: -100px;
+  }
+}
+
+  </style>
+
+</header>
+
+<body>
+  <div class="filter"></div>
+  
+  <div class="top">
+    <font>C.Y.</font>
+    <div>
+      <span>About Me</span>
+      <span>Projects</span>
+      <span>Skills</span>
+      <span>Contact</span>
+    </div>
+  </div>
+  
+  <div class="about-me">
+    <div>I am currently a Mathematics major with a Computer Science track at the Hong Kong University of Science and Technology (HKUST). I have a strong interest in building practical projects that combine programming with visual design.</div>
+    
+    <div style="display: none;">Alongside my studies, I actively work on personal projects using HTML, CSS, JavaScript, and C++, while also exploring 3D modeling and rendering with Blender. I am focused on continuously improving my technical skills through hands-on practice and aim to create meaningful projects that combine logic, design, and creativity.</div>
+  </div>
+
+  <h3>Projects</h3>
+  <div class="project">
+    <div class="project-shell">
+      <div>
+        <img src='https://images.unsplash.com/photo-1727522974614-b592018e49e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwMzUzMjh8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+        <span>Math </span>
+        <font>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </font>
+      </div>
+      <div>
+        <img src='https://images.unsplash.com/photo-1739673584260-2236c1c6d37a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwMzUzMjh8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+        <span>Math </span>
+        <font>Contrary to popular belief, making it over 2000 years old. </font>
+      </div>
+      <div>
+        <img src='https://images.unsplash.com/photo-1635545195955-e65d68631341?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwMzU0MjZ8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+        <span>Math </span>
+        <font>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </font>
+      </div>
+      <div>
+        <img src='https://images.unsplash.com/photo-1727522974614-b592018e49e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwMzUzMjh8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+        <span>Math </span>
+        <font>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC. </font>
+      </div>
+      
+      
+      <span class="more-bnt"><i class="fa-solid fa-arrow-right"></i></span>
+      
+      
+    </div>
+  </div>
+  
+  
+  <h3>Skills</h3>
+  <div class="skill">
+    <span>C++</span>
+    <img src='https://images.unsplash.com/photo-1777735195882-1d84176a6fc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDA5OTJ8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+    
+    <span>Python</span>
+    <img src='https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original' alt=''>
+    
+    <span>HTML</span>
+    
+    <span>CSS</span>
+    
+    <span>Javascript</span>
+    
+    <span>Blender</span>
+    <img src='https://images.unsplash.com/photo-1637614052127-80276701a4e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDEwMzl8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+    
+    <span>Draw & Paint</span>
+    
+    <span>Music</span>
+    <img src='https://images.unsplash.com/photo-1626539896924-b328af4ef01d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDEyNzV8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+    
+    <span>Prose & Modern Verse</span>
+    
+  </div>
+  
+  
+  <h3>Contact</h3>
+  <div class="contact">
+    <span>iykyk@gmail.com.hk</span>
+  </div>
+  
+  
+    <div class="grass">
+    <div class="bg-color">123</div>
+    <div class="bg">23</div>
+    </div>
+
+  <script>
+  </script>
+</body>
+
+</html>
