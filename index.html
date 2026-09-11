@@ -7,20 +7,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>CY's Website</title>
 
-  <style>
-    :root {
-  --bg-color: #eee;
-  --text-col: #000;
-
+  <style>:root {
   --bg-color: #f5fbda;
   --text-col: #118ab2;
+
+  --bg-color: #eee;
+  --text-col: #000;
 
   --text-hover-col: #aaa;
 
   --bottom-padding: 120px;
 }
 img {
-  filter: grayscale(1);
+  afilter: grayscale(1);
 }
 
 body {
@@ -54,9 +53,9 @@ body {
   font-size: 60px;
 }
 .top div {
-  font-size: 20px;
+  font-size: 14px;
   text-align: right;
-  line-height: 1.5;
+  line-height: 2;
 }
 .top span {
   display: block;
@@ -75,7 +74,7 @@ h3 {
 
 .about-me {
   margin: 0 0 var(--bottom-padding);
-  font-size: 14px;
+  font-size: 16px;
 }
 .about-me div {
   margin: 0 0 20px;
@@ -95,13 +94,22 @@ h3 {
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+
+  padding: 0 20px 0;
+  margin: 0 -20px 0;
+}
+@media (min-width: 640px) {
+  .project-shell {
+    padding: 0 calc(50vw - 300px) 0;
+    margin: 0 calc(-1 * 50vw + 300px) 0;
+  }
 }
 .project-shell::-webkit-scrollbar {
   display: none;
 }
 .project-shell div {
-  min-width: 120px;
-  width: 120px;
+  min-width: 160px;
+  width: 160px;
   cursor: pointer;
 }
 .project-shell div:hover {
@@ -140,7 +148,8 @@ h3 {
 .skill {
   font-size: 20px;
   margin: 0 0 var(--bottom-padding);
-  line-height: 2;
+  line-height: 2.4;
+  text-align: justify;
 }
 .skill span {
   cursor: pointer;
@@ -149,10 +158,64 @@ h3 {
   color: var(--text-hover-col);
   cursor: pointer;
 }
-.skill img {
-  height: 40px;
-  margin: 0 0 0;
+
+.skill-items {
+  aborder: 1px red solid;
+  width: 70px;
+  height: 60px;
+  margin: -20px;
   vertical-align: middle;
+  display: inline-block;
+  background-image: url("https://spring-in-mars.github.io/images/skills-items.png");
+  mix-blend-mode: multiply;
+}
+#sk-it-2 {
+  width: 70px;
+  height: 60px;
+  background-position: 42% 0%;
+  border-radius: 30%;
+  background-size: 200px;
+  margin: -20px -10px -20px;
+}
+#sk-it-3 {
+  width: 80px;
+  height: 70px;
+  background-position: 94% 95%;
+  border-radius: 30%;
+  background-size: 250px;
+  margin: -20px -5px -20px;
+}
+#sk-it-4 {
+  width: 100px;
+  height: 70px;
+  background-position: 44% 96%;
+  border-radius: 30%;
+  background-size: 250px;
+  margin: -20px 0px -20px;
+}
+#sk-it-5 {
+  width: 80px;
+  height: 65px;
+  background-position: 89% 53%;
+  border-radius: 30%;
+  background-size: 250px;
+  margin: -20px 0px -20px;
+}
+#sk-it-6 {
+  width: 70px;
+  height: 70px;
+  background-position: 0% 89%;
+  border-radius: 30%;
+  background-size: 270px;
+  margin: -20px 0px -20px;
+}
+#sk-it-7 {
+  width: 75px;
+  height: 70px;
+  background-position: 12% 45%;
+  border-radius: 30%;
+  background-size: 270px;
+  margin: 0px 0px -20px;
 }
 
 .contact {
@@ -164,17 +227,17 @@ h3 {
   margin: -20px;
   height: 50vh;
   margin-top: -100px;
-  
+
   -webkit-mask-image: linear-gradient(to top, black 25%, transparent 100%);
   mask-image: linear-gradient(to top, black 25%, transparent 100%);
 }
-.grass .bg{
+.grass .bg {
   position: absolute;
   z-index: 50;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   background-size: cover;
   background-position: center 68%;
@@ -182,20 +245,20 @@ h3 {
   filter: grayscale(1);
   mix-blend-mode: multiply;
 }
-.grass .bg-color{
+.grass .bg-color {
   sborder: 1px blue solid;
   position: absolute;
   z-index: 5;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: var(--bg-color);
 }
 @media (min-width: 640px) {
   .grass {
     margin: 0 calc(-50vw + 300px) -20px;
-  margin-top: -100px;
+    margin-top: -100px;
   }
 }
 
@@ -203,17 +266,43 @@ h3 {
 
 </header>
 
-<body>
-  <div class="filter"></div>
-  
+<body>  
   <div class="top">
-    <font>C.Y.</font>
+    <font>I'm C.Y.</font>
     <div>
-      <span>About Me</span>
-      <span>Projects</span>
-      <span>Skills</span>
-      <span>Contact</span>
+      <span>#About Me</span>
+      <span>#Projects</span>
+      <span>#Contact</span>
     </div>
+  </div>
+  
+  
+  <h3>I work with</h3>
+  <div class="skill">
+    <span>C++,</span>
+    
+    <span>Python,</span>
+    
+    <span>HTML,</span>
+    
+    <span>CSS,</span>
+    
+    <span>Javascript,</span>
+    
+    <span>Blender,</span>
+    <div class="skill-items" id="sk-it-2"></div>
+    
+    <span>Draw & Paint,</span>
+    <div class="skill-items" id="sk-it-3"></div>
+    <div class="skill-items" id="sk-it-4"></div>
+    
+    <span>Music,</span>
+    <div class="skill-items" id="sk-it-5"></div>
+    <div class="skill-items" id="sk-it-6"></div>
+    
+    <span>Prose & Modern Verse</span>
+    <div class="skill-items" id="sk-it-7"></div>
+    
   </div>
   
   <div class="about-me">
@@ -221,14 +310,15 @@ h3 {
     
     <div style="display: none;">Alongside my studies, I actively work on personal projects using HTML, CSS, JavaScript, and C++, while also exploring 3D modeling and rendering with Blender. I am focused on continuously improving my technical skills through hands-on practice and aim to create meaningful projects that combine logic, design, and creativity.</div>
   </div>
+  
 
   <h3>Projects</h3>
   <div class="project">
     <div class="project-shell">
-      <div>
-        <img src='https://images.unsplash.com/photo-1727522974614-b592018e49e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwMzUzMjh8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
-        <span>Math </span>
-        <font>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </font>
+      <div nclick="window.open('https://spring-in-mars.github.io/Math-Tools/Matrix-Calculator.html');">
+        <img src='https://spring-in-mars.github.io/images/matrix-calc-web.jpg' alt=''>
+        <span>Matrix Calculator</span>
+        <font>A simple matrix calculator for matrix multiplication, determinants, inverses, ranks, and more.</font>
       </div>
       <div>
         <img src='https://images.unsplash.com/photo-1739673584260-2236c1c6d37a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwMzUzMjh8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
@@ -254,36 +344,12 @@ h3 {
   </div>
   
   
-  <h3>Skills</h3>
-  <div class="skill">
-    <span>C++</span>
-    <img src='https://images.unsplash.com/photo-1777735195882-1d84176a6fc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDA5OTJ8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
-    
-    <span>Python</span>
-    <img src='https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original' alt=''>
-    
-    <span>HTML</span>
-    
-    <span>CSS</span>
-    
-    <span>Javascript</span>
-    
-    <span>Blender</span>
-    <img src='https://images.unsplash.com/photo-1637614052127-80276701a4e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDEwMzl8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
-    
-    <span>Draw & Paint</span>
-    
-    <span>Music</span>
-    <img src='https://images.unsplash.com/photo-1626539896924-b328af4ef01d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODkwNDEyNzV8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
-    
-    <span>Prose & Modern Verse</span>
-    
-  </div>
+  
   
   
   <h3>Contact</h3>
   <div class="contact">
-    <span>cy.connect.hk@gmail.com</span>
+    <span>cy.connect.hk@gmail.com.hk</span>
   </div>
   
   
