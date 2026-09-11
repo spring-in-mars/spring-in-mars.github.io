@@ -47,12 +47,13 @@ body {
   align-items: start;
   justify-content: space-between;
   flex-direction: row;
-  margin: 0 0 var(--bottom-padding);
+  amargin: 0 0 var(--bottom-padding);
 }
 .top font {
   font-size: 60px;
 }
 .top div {
+  display: none;
   font-size: 14px;
   text-align: right;
   line-height: 2;
@@ -146,10 +147,10 @@ h3 {
 }
 
 .skill {
-  font-size: 20px;
-  margin: 0 0 var(--bottom-padding);
-  line-height: 2.4;
-  text-align: justify;
+  font-size: 18px; 
+  margin: -10px 0 var(--bottom-padding);
+  line-height: 1.8;
+  ztext-align: justify;
 }
 .skill span {
   cursor: pointer;
@@ -158,7 +159,6 @@ h3 {
   color: var(--text-hover-col);
   cursor: pointer;
 }
-
 .skill-items {
   aborder: 1px red solid;
   width: 70px;
@@ -175,7 +175,7 @@ h3 {
   background-position: 42% 0%;
   border-radius: 30%;
   background-size: 200px;
-  margin: -20px -10px -20px;
+  margin: -21px -10px -21px;
 }
 #sk-it-3 {
   width: 80px;
@@ -183,7 +183,8 @@ h3 {
   background-position: 94% 95%;
   border-radius: 30%;
   background-size: 250px;
-  margin: -20px -5px -20px;
+  margin: -26px -5px -26px;
+  transform: scale(0.8);
 }
 #sk-it-4 {
   width: 100px;
@@ -191,7 +192,8 @@ h3 {
   background-position: 44% 96%;
   border-radius: 30%;
   background-size: 250px;
-  margin: -20px 0px -20px;
+  margin: -26px -10px -26px;
+  transform: scale(0.8);
 }
 #sk-it-5 {
   width: 80px;
@@ -199,15 +201,7 @@ h3 {
   background-position: 89% 53%;
   border-radius: 30%;
   background-size: 250px;
-  margin: -20px 0px -20px;
-}
-#sk-it-6 {
-  width: 70px;
-  height: 70px;
-  background-position: 0% 89%;
-  border-radius: 30%;
-  background-size: 270px;
-  margin: -20px 0px -20px;
+  margin: -23.5px 0px -23.5px;
 }
 #sk-it-7 {
   width: 75px;
@@ -215,7 +209,8 @@ h3 {
   background-position: 12% 45%;
   border-radius: 30%;
   background-size: 270px;
-  margin: 0px 0px -20px;
+  margin: -13px 0px 0;
+  transform: scale(0.9);
 }
 
 .contact {
@@ -268,7 +263,7 @@ h3 {
 
 <body>  
   <div class="top">
-    <font>I'm C.Y.</font>
+    <font>I'm CY</font>
     <div>
       <span>#About Me</span>
       <span>#Projects</span>
@@ -276,6 +271,11 @@ h3 {
     </div>
   </div>
   
+  <div class="about-me">
+    <div>I am currently a Mathematics major with a Computer Science track at the Hong Kong University of Science and Technology (HKUST). I have a strong interest in building practical projects that combine programming with visual design.</div>
+    
+    <div style="display: none;">Alongside my studies, I actively work on personal projects using HTML, CSS, JavaScript, and C++, while also exploring 3D modeling and rendering with Blender. I am focused on continuously improving my technical skills through hands-on practice and aim to create meaningful projects that combine logic, design, and creativity.</div>
+  </div>
   
   <h3>I work with</h3>
   <div class="skill">
@@ -298,24 +298,17 @@ h3 {
     
     <span>Music,</span>
     <div class="skill-items" id="sk-it-5"></div>
-    <div class="skill-items" id="sk-it-6"></div>
     
     <span>Prose & Modern Verse</span>
     <div class="skill-items" id="sk-it-7"></div>
     
   </div>
   
-  <div class="about-me">
-    <div>I am currently a Mathematics major with a Computer Science track at the Hong Kong University of Science and Technology (HKUST). I have a strong interest in building practical projects that combine programming with visual design.</div>
-    
-    <div style="display: none;">Alongside my studies, I actively work on personal projects using HTML, CSS, JavaScript, and C++, while also exploring 3D modeling and rendering with Blender. I am focused on continuously improving my technical skills through hands-on practice and aim to create meaningful projects that combine logic, design, and creativity.</div>
-  </div>
-  
 
   <h3>Projects</h3>
   <div class="project">
     <div class="project-shell">
-      <div nclick="window.open('https://spring-in-mars.github.io/Math-Tools/Matrix-Calculator.html');">
+      <div onclick="window.open('https://spring-in-mars.github.io/Math-Tools/Matrix-Calculator.html');">
         <img src='https://spring-in-mars.github.io/images/matrix-calc-web.jpg' alt=''>
         <span>Matrix Calculator</span>
         <font>A simple matrix calculator for matrix multiplication, determinants, inverses, ranks, and more.</font>
